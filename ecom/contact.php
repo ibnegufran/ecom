@@ -21,13 +21,6 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php';?>
-    <div class="home">
-        <div class="content">
-            <h3>hand picked book to your door</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae</p>
-            <a href="about.php" class="white-btn">discover more</a>
-        </div>
-    </div>
 
 
 

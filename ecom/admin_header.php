@@ -1,4 +1,5 @@
 <?php
+$message =[];
         if(isset($message)){
             foreach($message as $message){
                 echo '
