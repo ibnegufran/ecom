@@ -79,7 +79,12 @@ html{
     justify-content:center;
 }
 
+.white-btn:hover{
 
+  background-color: var(--white);
+  color: black;
+
+}
 .header1{
     background-color:var(--light-bg);
 }
