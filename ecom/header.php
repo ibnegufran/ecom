@@ -36,7 +36,7 @@
     <div class="account-box flex">
         <p>username : <span><?php echo $_SESSION['user_name'];?></span></p>
         <p>email : <span><?php echo $_SESSION['user_email'];?></span></p>
-<a href="logout.php" class="delete-btn" >delete</a>
+<a href="logout.php" class="delete-btn" onclick="alert('are you sure to logout' ) ">logout</a>
     </div>
 
    </div>

@@ -97,6 +97,14 @@ html{
 
 
 }
+header .header2.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 1s linear;
+}
 .share_icons a{
     font-size: 2rem;
     color:var(--black) ;
@@ -170,6 +178,7 @@ html{
     border: var(--border);
     border-radius: 1rem;
     display: none;
+    background-color: var(--white);
 }
 .header2 .navbar .account-box.active{
     display:flex;
@@ -195,13 +204,114 @@ font-weight: 300;
 #menu-btn{
     display: none;
 }
+.home{
+  min-height: 70vh;
+  background: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 74%)), url(images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.home .content{
+  width: 60rem;
+  text-align: center;
+}
+.home .content h3{
+  color: var(--white);
+  font-size: 4.5rem;
+}
+.home .content p{
+  color: var(--light-white);
+  font-size: 1.5rem;
+  padding:1rem 0;
+  line-height: 2;
+}
+
+.text{
+    font-size: 3rem;
+    color: var(--red);
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+
+.products{
+  background-color: #f8f9fa!important;
+}
+.products .box_con{
+  max-width: 1200px;
+   margin:  0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,30rem);
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.products .box_con .box{
+  /*border: var(--border);*/
+  box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important;
+  padding:2rem 0;
+  text-align: center;
+position: relative;
+border: 1px solid #dee2e6!important;
+
+}
+/*.products .box_con .box form{
+  text-align: center;
+
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+
+}*/
+.products .box_con .box form img{
+  height: 30rem;
+}
+.products .box_con .box form .name{
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 5px;
+  color: black;
+}
+.products .box_con .box form .price{
+  font-size: 1.5rem;
+  background-color: var(--red);
+  color: var(--white);
+  position: absolute;
+  padding:1rem 1.2rem;
+  top: 1rem;
+  left: 1rem;
+  border-radius: .8rem;
+}
+
+.products .box_con .box form .add_to {
+  background-color: var(--purple);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  padding:1rem 0rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.products .box_con .box form .add_to:hover{
+  background-color: var(--black);
+}
 
 
+
+
+
+
+ 
 
 /* footer styling */
 
 .footer{
     background-color: var(--light-bg);
+    padding-top: 4rem;
 
 }
 .footer .box-con{
@@ -266,6 +376,7 @@ font-weight: 300;
 
 transition: all .8s ease-in;
       border-top: var(--border);
+      background-color: white;
     }
     .header2 .navbar .menu_con.nav-active{
        position: absolute;
@@ -280,6 +391,9 @@ top: 99%;
     }
     .footer .box-con{
      padding-left: 2rem;
+    }
+    .home .content h3{
+      font-size: 3.5rem;
     }
 }
 

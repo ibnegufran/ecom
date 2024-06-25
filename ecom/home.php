@@ -29,7 +29,42 @@ if(!isset($user_id)){
         </div>
     </div>
 
+<!-- products -->
 
+<section class="products">
+    <div class="box_con">
+        <?php
+        $select_products=mysqli_query($con,"SELECT * FROM `products` LIMIT 6") or die('query failed');
+
+        if(mysqli_num_rows($select_products)>0){
+            while($fecth_products=mysqli_fetch_assoc($select_products)){
+        ?>
+
+<div class="box">
+<form action="" method="post">
+    <img src="uploaded_img/<?php echo $fecth_products['image'];?>">
+    <div class="name"><?php echo $fecth_products['name'];?></div>
+    <div class="price">$<?php echo $fecth_products['price'];?>/-</div>
+    <input type="hidden" name="product_name" value="<?php echo $fecth_products['name'];?>">
+    <input type="hidden" name="product_price" value="<?php echo $fecth_products['price'];?>">
+    <input type="hidden" name="product_image" value="<?php echo $fecth_products['image'];?>">
+
+    <input type="sumbit" name="add_to_cart" value="add to cart" class="add_to">
+
+</form>
+    </div>
+
+<?php
+
+            }
+        }else{
+            echo '<p class="text">no products added yet</p>';
+        }
+?>
+
+
+    </div>
+</section>
 
 
 
