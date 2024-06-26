@@ -28,7 +28,9 @@ if($add_product_query){
         $message[]='too big image size';
     }else{
         move_uploaded_file($image_tmp_name,$image_folder);
-        $message[]='product inserted successfully';
+        $message=['product inserted successfully'];
+        // $message[]='product inserted successfully';
+
         
 
     }

@@ -1,21 +1,18 @@
-<?php
+
+        <?php
 $message =[];
-        if(isset($message)){
-            foreach($message as $message){
-                echo '
-                <div class="message">
-        <span>'.$message.'</span>
-            <i class="fa fa-times" onclick="this.parentElement.remove()"></i>
         
-        </div>
-                
-                ';
-            }
-        }
-        
-        
-        
-        ?>
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="message">
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+   }
+}
+?>
 
 <header class="head">
 

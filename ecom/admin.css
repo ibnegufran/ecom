@@ -264,6 +264,7 @@ justify-content: space-evenly;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 .message i{
     font-size: 2rem;
