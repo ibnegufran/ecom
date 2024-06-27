@@ -61,6 +61,7 @@
     <!-- products -->
 
     <section class="products">
+        <h2 class="title">latest products</h2>
         <div class="box_con">
             <?php
             $select_products=mysqli_query($con,"SELECT * FROM `products` LIMIT 6") or die('query failed');
@@ -98,6 +99,30 @@
 
 
 
+    <section class="about">
+        <div class="about_con">
+            
+            <div class="image">
+                <img src="images/about-img.jpg">
+            </div>
+            <div class="content">
+                <h3>about us</h3>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae</p>
+                <a href="about.php" class="btn">read more</a>
+            </div>
+        </div>
+
+    </section>
+
+
+<section class="home-contact">
+   <div class="content">
+        <h3>have any question ?</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                <a href="about.php" class="btn">contact us</a>
+
+   </div>
+</section>
 
 
 
