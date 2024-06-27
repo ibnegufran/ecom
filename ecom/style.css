@@ -332,6 +332,7 @@ position: relative;
 .title{
   font-size: 4rem;
   text-align: center;
+  text-transform: uppercase;
 }
 .about{
   padding: 5rem 0;
@@ -367,7 +368,7 @@ position: relative;
  .about_con .content p{
   color: #818080;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-top: 1rem;
  }
 
@@ -394,6 +395,152 @@ position: relative;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
+
+
+
+
+
+
+
+
+
+/*about page styling*/
+
+
+.header {
+  min-height: 50vh;
+  /*background-image: url('/.images/heading-bg.webp') no-repeat;*/
+  background-image: url(images/heading-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header p{
+  margin-top: 1rem;
+
+}
+.header p a{
+  font-size: 1.5rem;
+}
+.header p a:hover{
+  text-decoration: underline;
+}
+
+.reviews {
+  background-color: var(--light-bg);
+  padding: 6rem 2rem;
+  /*background-color: red;*/
+}
+.reviews .box-con{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  gap:2rem;
+}
+.reviews .box-con .box{
+  background-color: var(--white);
+  padding: 2rem 2rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  text-align: center;
+}
+.reviews .box-con .box img{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.reviews .box-con .box p{
+  /*color:#938b8b;*/
+  color: var(--light-color);
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 1rem;
+}
+.reviews .box-con .box .stars i{
+  color: orange;
+  font-size: 1.2rem;
+  margin: 1rem .5rem;
+}
+.reviews .box-con .box h3{
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+
+
+
+ .authors {
+  padding: 6rem 2rem;
+  /*background-color: red;*/
+}
+.authors .box-con{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  /*grid-template-columns: repeat(auto-fit,30rem);*/
+
+  gap:2rem;
+  align-items: center;
+  justify-content: center;
+}
+.authors .box-con .box{
+ position: relative;
+ text-align: center;
+ border:var(--border2);
+ padding: 1rem 0;
+ box-shadow: var(--box-shadow); 
+ overflow: hidden;
+ /*cursor: pointer;*/
+}
+.authors .box-con .box img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+
+}
+.authors .box-con .box .shares{
+  position: absolute;
+  top: 0;left: -10rem;
+}
+.authors .box-con .box:hover .shares{
+left: 0;
+transform: all 1s ease-in;
+}
+.authors .box-con .box:hover{
+  background-color: var(--light-white);
+}
+.authors .box-con .box .shares a{
+  font-size: 2rem;
+  padding: 1.2rem;
+  margin: 1rem;
+  display: block;
+  border: var(--border);
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: .2rem;
+
+}
+.authors .box-con .box .shares a:hover{
+  background-color: var(--black);
+  color: var(--white);
+}
+
+
+.authors .box-con .box h3{
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+
+
+
 
 
 

@@ -95,6 +95,9 @@
 
 
         </div>
+        <div class="load-more" style="margin-top: .5rem;text-align: center;">
+            <a href="shop.php" class="option-btn">load more</a>
+        </div>
     </section>
 
 
@@ -117,7 +120,7 @@
 
 <section class="home-contact">
    <div class="content">
-        <h3>have any question ?</h3>
+        <h3 class="title">have any question ?</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente molestiae Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
                 <a href="about.php" class="btn">contact us</a>
 
