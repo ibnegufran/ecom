@@ -11,5 +11,7 @@ if($con){
 else{
     echo "connection failed";
 }
-
+// if (!isset($message) || !is_array($message)) {
+//     $message = [];
+// }
 ?>

@@ -36,14 +36,14 @@ if(isset($_GET['delete'])){
 while($fetch_messages = mysqli_fetch_assoc($select_messages)){
     ?>
 <div class="message_box flex">
-<p>user id : <span><?php echo $fetch_messages['user-id']?></span></p>
+<p>user id : <span><?php echo $fetch_messages['user_id']?></span></p>
 
     <p>name : <span><?php echo $fetch_messages['name']?></span></p>
     <p>email : <span><?php echo $fetch_messages['email']?></span></p>
     <p>phone number : <span><?php echo $fetch_messages['number']?></span></p>
     <p>message : <span><?php echo $fetch_messages['message']?></span></p>
 
-    <a href="admin_messages.php?delete=<?php echo $fetch_messages['id']?>" onclick="return confirm('delete this message')" id="message_delete" class="delete-btn">delete</a>
+    <a href="admin_messages.php?delete=<?php echo $fetch_messages['id']?>" onclick="return confirm('delete this message')" id="message_delete" class="delete-btn">delete <i class="fas fa-trash"></i></a>
 
 
 </div>

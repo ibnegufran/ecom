@@ -62,7 +62,7 @@ while($fetch_orders = mysqli_fetch_assoc($select_orders)){
 </select>
 <div class="order-buttons">
 <input type="submit" value="update" name="update" id="update_orderbtn" class="option-btn">
-<a href="admin_orders.php?delete=<?php echo $fetch_orders['id']?>" onclick="return confirm('delete this item')" id="order_delete" class="delete-btn" style="margin-left:0rem;">delete</a>
+<a href="admin_orders.php?delete=<?php echo $fetch_orders['id']?>" onclick="return confirm('delete this item')" id="order_delete" class="delete-btn" style="margin-left:0rem;">delete <i class="fas fa-trash"></i></a>
 </div>
     </form>
 
