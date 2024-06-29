@@ -86,7 +86,9 @@ height: 10vh;
 
 
 }
-
+body{
+    overflow-x: hidden;
+}
 html{
     font-size: 62.5%;
     text-transform: capitalize;
@@ -163,31 +165,35 @@ ul li a:hover{
     color: var(--purple);
 }
 .dashboard{
-    width: 100vw;
-    height:auto;
-    display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
+    padding: 3rem 2rem;
 }
 .dashboard h1{
     font-size: 6rem;
     margin: 2rem;
+    text-align: center;
 }
-.box-container{
-    width: 80vw;
-    /* background-color: #f39c12; */
+.dashboard .box-container{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem ;
+   /*background-color: red;*/
+   display: grid;
+   grid-template-columns: repeat(auto-fit,25rem);
+   gap: 4rem;
+   align-items: center;
+   justify-content: center;
 }
 .box-container .box{
     height: 10rem;
     width: 20rem;
     border: var(--border);
-    float: left;
-    margin: 2rem;
+    /*float: left;*/
+    /*margin: 2rem;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding: 2.5rem 1.5rem;
 }
 .box h3{
 font-size: 2rem;
@@ -227,12 +233,11 @@ flex-direction: column;
 justify-content: space-evenly;
 }
  .add-products form input:not([type="submit"]):not([type="reset"]){
-    width: 40rem;
-    height: 6rem;
+    width: 100%;
     border:  var(--border);
     font-size: 1.5rem;
-    border-radius: 1.3rem;
-    padding-left: 1.5rem;
+    border-radius: .5rem;
+    padding:1rem 1.5rem;
     margin-top: 1rem;
     text-transform: none;
     padding-top: auto;
@@ -346,47 +351,65 @@ justify-content: space-evenly;
 }
 
 .update_container form{
-    height: 45rem;
-    width:42rem;
+  /*  height: 45rem;
+    width:42rem;*/
+    padding: 2rem 2rem;
     background-color: white;
     padding: 4rem;
     border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update_container form .update-input{
+    width: 100%;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
 }
 
 
 .update_container img{
-    height: 50%;
+    height: 20rem;
 }
 
 
 /* order page style */
+.order_section
+{
+    padding: 3rem 2rem;
+}
 .order_heading{
     font-size: 4rem;
     text-align: center;
     margin: 2rem;
 }
 .orders{
-    width: 90rem;
-    /* background-color: #333; */
+    max-width:1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,30rem);
+     /*background-color: #333; */
+     gap:2rem;
+     align-items: center;
+     justify-content: center;
 }
-.oredr_section{
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
 
-}
 .orders .order_box{
-    min-width: 25rem;
-    height: auto;
-  /*padding: 2rem 4rem;*/
+   
     background-color:var(--light-bg);
     float: left;
-    margin-right: 4rem;
+    height: 50rem;
+    /*margin-right: 4rem;*/
     flex-direction: column;
     justify-content: space-evenly;
     border: var(--border);
+    padding: 1rem 1.5rem;
     /* align-items: center; */
-    background-color: red;
+    position: relative;
 }
 .order_box p{
     font-size: 1.5rem;
@@ -398,27 +421,13 @@ justify-content: space-evenly;
     color: var(--purple);
     font-weight: 500;
 }
-/*.order_box form {
-    width: 100%;
-}*/
-.order-buttons{
-    width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: flex-start;
+
+
+.orders .order_box form{
+position: absolute;
+bottom: 2rem ;left: 1rem;
 }
 
-/* #update_orderbtn{
-    background-color: var(--purple);
-    color: white;
-    font-size: 1.4rem;
-    font-weight: bold;
-    cursor: pointer;
-    width: 10rem;
-    padding: .2rem 1rem .2rem  1rem;
-    height: 4rem;
-} */
 #update_status{
     font-size: 1.5rem;
     padding: 1rem 2rem;
@@ -599,19 +608,7 @@ margin:.8rem 0 1rem 0;
         width: 15rem;
         
     }
-    .orders{
-        width: 90rem;
-        /* background-color: #333; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-  .orders  .order_box{
-        height: 45rem;
-        width: 25rem;
-       
-    }
+    
     .users{
         /* background-color: #333;  */
         display: flex;

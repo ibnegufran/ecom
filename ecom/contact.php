@@ -63,12 +63,12 @@ $select_message=mysqli_query($con,"SELECT * FROM `messages` WHERE name='$name' A
 
 <section class="contact">
     <div class="box-con">
+    <h1 class="title" style="color: var(--black); font-size: 3rem;">say something!</h1>
         <form method="post">
             <input type="text" name="name" required placeholder="enter your name" class="box">
             <input type="email" name="email" required placeholder="enter your email" class="box">
             <input type="number" name="number" required placeholder="enter your mobile number" class="box">
-            <textarea name="message" placeholder="enter your message here" rows="10" cols="40">
-            </textarea>
+            <textarea name="message" placeholder="enter your message here" rows="10" cols="40"></textarea>
                 <input type="submit" name="send" value="send message" class="btn">
 
         </form>

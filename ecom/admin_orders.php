@@ -34,8 +34,8 @@ if(isset($_GET['delete'])){
 </head>
 <body>
     <?php include 'admin_header.php';?>
+        <section class="order_section">
     <h1 class="order_heading">placed orders</h1>
-        <section class="order_section flex">
             <div class="orders">
                 <?php
                 $select_orders=mysqli_query($con,"SELECT * FROM `orders`" ) or die('query failed');
@@ -55,13 +55,13 @@ while($fetch_orders = mysqli_fetch_assoc($select_orders)){
     <form action="" method="post">
 <input type="hidden" name="id" value="<?php echo $fetch_orders['id']?>">
 <select name="payment_status" id="update_status">
-<option value="" selected disabled><?php echo $fetch_orders['payment_status']?></option>
+<option value="" selected disabled><?php echo $fetch_orders['payment_status'];?></option>
 <option value="pending">pending</option>
 <option value="completed">completed</option>
 
 </select>
-<div class="order-buttons">
-<input type="submit" value="update" name="update" id="update_orderbtn" class="option-btn">
+<div class="order-buttons flex" style="margin-top: 1rem;">
+<input type="submit" value="update" name="update" id="update_orderbtn" class="option-btn" style="margin-right: 1.5rem;">
 <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']?>" onclick="return confirm('delete this item')" id="order_delete" class="delete-btn" style="margin-left:0rem;">delete <i class="fas fa-trash"></i></a>
 </div>
     </form>

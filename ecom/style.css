@@ -563,7 +563,7 @@ transform: all 1s ease-in;
   align-items: flex-start;
   justify-content: center;
 }
-.contact .box-con form .box ,textarea{
+.contact .box-con form .box{
   width: 100%;
   background-color: white;
   box-shadow: var(--box-shadow);
@@ -571,6 +571,15 @@ transform: all 1s ease-in;
   margin: 2rem 0;
   font-size: 1.5rem;
 
+}
+.contact .box-con form  textarea{
+   width: 100%;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  color: black;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -581,7 +590,7 @@ transform: all 1s ease-in;
  .cart{
   /*background-color: #f8f9fa!important;*/
   background-color: var(--light-bg);
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 
 }
 .cart .cart-con{
@@ -651,6 +660,120 @@ position: relative;
 .cart .cart-con .box a:hover i{
   transform: rotate(360deg);
 }
+
+.cart .sub_total{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+
+}
+.cart .sub_total span{
+  color: var(--red);
+}
+
+.cart-total{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  border: var(--border2);
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+.cart-total p{
+   font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+
+}
+.cart-total p span{
+  color: var(--red);
+
+}
+.disabled {
+  pointer-events: none;
+  background-color: var(--light-white);
+}
+
+
+/*checkout page styling*/
+
+
+.checkout-products{
+  padding: 4rem 2rem;
+}
+ .checkout-products .check_con{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+  grid-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+ }
+ .checkout-products .check_con .box{
+  border: var(--border2);
+  padding: 1.5rem;
+ }
+.checkout-products .check_con .box p{
+  font-size: 1.8rem;
+
+}
+.checkout-products .check_con .box p span{
+  color: var(--red);
+}
+.grand_total p{
+   font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+
+}
+.grand_total p span{
+  color: var(--red);
+}
+
+.checkout_form{
+  padding: 3rem 2rem;
+}
+.checkout_form .form_con{
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+  /*background-color: red;*/
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border2);
+
+}
+.checkout_form .form_con form .box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkout_form .form_con form .box .input-area{
+  width: 50rem;
+  margin: 1.5rem;
+}
+.checkout_form .form_con form .box .input-area input,select{
+width: 100%;
+border: var(--border2);
+/*display: block;*/
+padding: .8rem 1rem;
+font-size: 1.5rem; 
+border-radius: .2rem;
+margin-top: 1rem;
+}
+.checkout_form .form_con form .box .input-area span{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+
+
+
 
 /* footer styling */
 

@@ -18,7 +18,17 @@ $message[]='your product is updated';
 if(isset($_GET['delete'])){
 $delete_id=$_GET['delete'];
 mysqli_query($con,"DELETE  FROM `cart` WHERE id='$delete_id'") or die('query failed');
+    header('location:cart.php');
+
 }
+
+
+if(isset($_GET['delete_all'])){
+mysqli_query($con,"DELETE  FROM `cart` WHERE user_id='$user_id'") or die('query failed');
+    header('location:cart.php');
+
+}
+$grand_total=0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +49,7 @@ mysqli_query($con,"DELETE  FROM `cart` WHERE id='$delete_id'") or die('query fai
         </section>
 
 <section class="cart">
-    <!-- <h1 class="title"></h1> -->
+    <!-- <h1 class="title">product added</h1> -->
     <div class="cart-con">
         
         <?php
@@ -47,6 +57,7 @@ $select_product=mysqli_query($con,"SELECT * FROM `cart` WHERE user_id='$user_id'
 
 if(mysqli_num_rows($select_product)>0){
     while($fetch_products=mysqli_fetch_assoc($select_product)){
+
         ?>
 <div class="box">
     <a href="cart.php?delete=<?php echo $fetch_products['id'];?>" class="" onclick="return confirm('are you sure to delete this item from cart')"><i class="fas fa-times"></i></a>
@@ -61,7 +72,10 @@ if(mysqli_num_rows($select_product)>0){
         <input type="submit"  value="update" name="update_cart" class="option-btn">
         </form>
         <div class="sub_total">
-            <p>sub-toal : <span><?php echo $sub_total=($fetch_products['price'] * $fetch_products['quantity']);?></span></p>
+            <p>sub-total :  <span>$<?php echo $sub_total=($fetch_products['price'] * $fetch_products['quantity']);
+  
+            ?>/-</span></p>
+
         </div>
 
 </div>
@@ -72,6 +86,7 @@ if(mysqli_num_rows($select_product)>0){
 
 
         <?php
+        $grand_total += $sub_total;
     }
 }else{
     echo '<p class="text">your cart is empty</p>';
@@ -80,8 +95,16 @@ if(mysqli_num_rows($select_product)>0){
     </div>
 
 <div style="margin-top: 2rem;  text-align:center;">
-    <a href="cart.php?delete_all" class="delete-btn" onclick="return confirm('are you sure to delete all item from cart')"><i class="fas fa-times"></i></a>
+    <a href="cart.php?delete_all" class="delete-btn  <?php echo ($grand_total >1) ? '' : 'disabled';?>" onclick="return confirm('are you sure to delete all items from cart')">dalete all</a>
+           
     
+</div>
+
+<div class="cart-total">
+     <p>grand-total :  <span>$<?php echo $grand_total; ?>/-</span></p>
+            <a href="shop.php" class="option-btn" style="margin-right: 1rem;">continue shopping</a>
+            <a href="checkout.php" class="option-btn <?php echo ($grand_total >1) ? '' : 'disabled';?>">continue to checkout</a>
+
 </div>
 
 </section>

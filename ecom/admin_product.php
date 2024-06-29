@@ -174,14 +174,14 @@ if(isset($_GET['update'])){
         while($row=mysqli_fetch_assoc($update_query)){
             ?>
     <div class="update_container flex">
-    <form action="" method="post" class="flex" enctype="multipart/form-data">
+    <form action="" method="post" class="" enctype="multipart/form-data">
         <input type="hidden" name="update_p_id" value="<?php echo $row['id']; ?>">
         <input type="hidden" name="update_old_image" value="<?php echo $row['image']; ?>">
 
         <img src="uploaded_img/<?php echo $row['image']; ?>" alt="">
-<input type="text"  value="<?php echo $row['name']; ?>" name="update_name" id="update_name" placeholder="enter product name" >
-<input type="number"  value="<?php echo $row['price'];?>" name="update_price" id="update_price" placeholder="enter product price" >
- <input type="file"  value="<?php echo $row['image'];?>"  name="update_image"  accept=".jpg  ,.jpeg, .png"  id="file">
+<input type="text"  value="<?php echo $row['name']; ?>" name="update_name" id="update_name" placeholder="enter product name"  class="update-input">
+<input type="number"  value="<?php echo $row['price'];?>" name="update_price" id="update_price" placeholder="enter product price"  class="update-input">
+ <input type="file"  value="<?php echo $row['image'];?>"  name="update_image"  accept=".jpg  ,.jpeg, .png"  id="file" class="update-input">
 <div class="buttons">
 <input type="submit"  name="update_product" value="update" id="update_btn" class="btn">
 <input type="reset"  name="reset-product" value="reset" id="reset" class="option-btn">
