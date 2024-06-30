@@ -55,7 +55,9 @@ while($fetch_orders = mysqli_fetch_assoc($select_orders)){
     <form action="" method="post">
 <input type="hidden" name="id" value="<?php echo $fetch_orders['id']?>">
 <select name="payment_status" id="update_status">
-<option value="" selected disabled><?php echo $fetch_orders['payment_status'];?></option>
+ <option value="" selected disabled><?php echo $fetch_orders['payment_status']; ?></option> 
+<!-- <option value="pending">pending</option> -->
+
 <option value="pending">pending</option>
 <option value="completed">completed</option>
 

@@ -28,7 +28,7 @@ if(isset($_GET['delete'])){
 </head>
 <body>
     <?php include 'admin_header.php';?>
-        <section class="message_section flex">
+        <section class="message_section">
             <div class="messages">
                 <?php
                 $select_messages=mysqli_query($con,"SELECT * FROM `messages`" ) or die('query failed');

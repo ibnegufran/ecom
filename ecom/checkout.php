@@ -18,13 +18,13 @@ if(isset($_POST['order_btn'])){
     $address=mysqli_real_escape_string($con,'flat no.' . $_POST['flate'] . ', '. $_POST['street'] . ', '. $_POST['country'] . ', '. $_POST['state'] . ', '. $_POST['city'] .'-'.  $_POST['pincode']);
     $placed_on=date('D-M-Y');
     $cart_total=0;
-    $cart_products=array() ;
+    $cart_products[] = '';
 
     $cart_query=mysqli_query($con,"SELECT * FROM `cart` WHERE user_id='$user_id'") or die('query failed'); 
 
 if(mysqli_num_rows($cart_query) > 0){
       while($cart_item = mysqli_fetch_assoc($cart_query)){
-         $cart_products =array($cart_item['name'].' ('.$cart_item['quantity'].') ' );
+         $cart_products[] = $cart_item['name'].' ('.$cart_item['quantity'].') ';
          $sub_total = ($cart_item['price'] * $cart_item['quantity']);
          $cart_total += $sub_total;
       }
@@ -46,6 +46,7 @@ $message[]='order already placed';
 }else{
     mysqli_query($con, "INSERT INTO `orders`(user_id,name,number,email,method,address,total_products,total_price,placed_on) VALUES('$user_id','$name','$number','$email','$method','$address','$total_products','$cart_total','$placed_on')") or die('query failed');
 $message[]='order successfully placed';
+echo '<script>alert("your order successfully placed")</script>';
 mysqli_query($con, "DELETE FROM `cart` WHERE user_id='$user_id'") or die('query failed');
 
 }
