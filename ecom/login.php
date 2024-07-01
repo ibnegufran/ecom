@@ -13,11 +13,16 @@ if(isset($_POST['submit'])){
         $row=mysqli_fetch_assoc($select_users);
         // mtlb agar bandah registered hai to jo email aur pass. dala hai uski row ko fetch karlo mtlab sari info.
         if($row['user_type'] == 'admin'){
+
+            if(($row['email'] == 'abdurrahman@gmail.com') && ($row['password'] == 'abdurrahman123')){
             $_SESSION['admin_name']=$row['name'];
             $_SESSION['admin_email']=$row['email'];
             $_SESSION['admin_id']=$row['id'];
             header('location:admin_page.php');
-            
+            }else{
+        $message[]='unauthorized access';
+
+            }
 
         }elseif($row['user_type'] =='user'){
             $_SESSION['user_name']=$row['name'];

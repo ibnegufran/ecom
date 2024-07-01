@@ -34,7 +34,7 @@ if (isset($message) && is_array($message)){
    <div class="navbar flex">
    <h1><a href="home.php"><span>book</span>snap</a></h1>
     <nav class="menu_con">
-        <a href="home.php">home</a>
+        <a href="home.php" class="">home</a>
         <a href="about.php">about</a>
         <a href="shop.php">shop</a>
         <a href="contact.php">contact</a>
@@ -55,7 +55,7 @@ if (isset($message) && is_array($message)){
     <div class="account-box flex">
         <p>username : <span><?php echo $_SESSION['user_name'];?></span></p>
         <p>email : <span><?php echo $_SESSION['user_email'];?></span></p>
-<a href="logout.php" class="delete-btn" onclick="alert('are you sure to logout' ) ">logout</a>
+<a class="delete-btn" href="logout.php">logout</a>
     </div>
 
    </div>
